@@ -85,7 +85,7 @@ WSGI_APPLICATION = 'kmoblog.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': env('DATABASE_NAME'),
+        'NAME': env('DATABASE_NAME', default='kmoblog'),
         'USER': env('DATABASE_USER', default='postgres'),
     }
 }
